@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center mb-4">
-              <img src="/public/flixapay-full.png" alt="" />
+              <img src="/flixapay-full.png" alt="" />
             </div>
             <p className="text-white/70 mb-6 max-w-xs">
             To revolutionize financial access by bridging the gap between underserved and

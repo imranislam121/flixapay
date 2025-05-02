@@ -29,7 +29,7 @@ const servicesData: Service[] = [
             'Easy and convenient payment tracking',
         ],
         revenuePercentage: 20,
-        imageUrl: '/public/services/cross-platform.png',
+        imageUrl: '/services/cross-platform.png',
     },
     {
         title: 'Digital Wallets and Currency Support',
@@ -47,7 +47,7 @@ const servicesData: Service[] = [
             'Convenient access anytime, anywhere',
         ],
         revenuePercentage: 10,
-        imageUrl: '/public/services/wallet.jpg',
+        imageUrl: '/services/wallet.jpg',
     },
     {
         title: 'Micro-loans',
@@ -65,7 +65,7 @@ const servicesData: Service[] = [
             'Support for underserved and underbanked communities',
         ],
         revenuePercentage: 10,
-        imageUrl: '/public/services/micro-loans.png',
+        imageUrl: '/services/micro-loans.png',
     },
     {
         title: 'Mobile Money',
@@ -83,7 +83,7 @@ const servicesData: Service[] = [
             'Affordable way to make payments and transfers',
         ],
         revenuePercentage: 10,
-        imageUrl: '/public/services/money-transfer.png',
+        imageUrl: '/services/money-transfer.png',
     },
     {
         title: 'B2B POS Terminals',
@@ -101,7 +101,7 @@ const servicesData: Service[] = [
             'Secure and reliable transactions',
         ],
         revenuePercentage: 30,
-        imageUrl: '/public/services/pos-terminali.jpg',
+        imageUrl: '/services/pos-terminali.jpg',
     },
     {
         title: 'B2C Underserved Communities Globally - Remittance',
@@ -119,7 +119,7 @@ const servicesData: Service[] = [
             'Secure and trustworthy remittance service',
         ],
         revenuePercentage: 20,
-        imageUrl: '/public/services/global-remittance.png',
+        imageUrl: '/services/global-remittance.png',
     }
 ];
 

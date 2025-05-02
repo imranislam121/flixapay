@@ -37,7 +37,7 @@ const Header = () => {
             className="flex items-center"
           >
             <img
-              src="/public/flixapay-full.png"
+              src="/flixapay-full.png"
               alt="FlixaPay Logo"
               className="h-7 mr-2"
             />
