@@ -22,6 +22,11 @@ const Header = () => {
     };
   }, []);
 
+  // Close mobile menu when a menu item is clicked
+  const handleMobileMenuClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#161635] shadow-md py-3' : 'bg-[#161635] py-6'
@@ -46,32 +51,26 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8">
-          <NavLink to={"/"}>
-            <motion.a
-              href="/"
-              className="text-white hover:text-pink-500 transition-colors"
-              whileHover={{ y: -2 }}
-            >
-              Home
-            </motion.a>
+          <NavLink
+            to={"/"}
+            className={({ isActive }) => 
+              `text-white transition-colors ${isActive ? 'text-pink-500' : 'hover:text-pink-500'}`}
+          >
+            Home
           </NavLink>
-          <NavLink to={"/services"}>
-            <motion.a
-              href="/"
-              className="text-white hover:text-pink-500 transition-colors"
-              whileHover={{ y: -2 }}
-            >
-              Services
-            </motion.a>
+          <NavLink
+            to={"/services"}
+            className={({ isActive }) => 
+              `text-white transition-colors ${isActive ? 'text-pink-500' : 'hover:text-pink-500'}`}
+          >
+            Services
           </NavLink>
-          <NavLink to={"/mission"}>
-            <motion.a
-              href="/"
-              className="text-white hover:text-pink-500 transition-colors"
-              whileHover={{ y: -2 }}
-            >
-              Mission
-            </motion.a>
+          <NavLink
+            to={"/mission"}
+            className={({ isActive }) => 
+              `text-white transition-colors ${isActive ? 'text-pink-500' : 'hover:text-pink-500'}`}
+          >
+            Mission
           </NavLink>
           <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
             <Button variant="outline" className="border-pink-500 text-pink-500 hover:bg-pink-50">
@@ -108,11 +107,33 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-[#161635] px-4 py-4 space-y-4">
-          <a href="#features" className="block text-white hover:text-pink-400">Features</a>
-          <a href="#how-it-works" className="block text-white hover:text-pink-400">How It Works</a>
-          <a href="#testimonials" className="block text-white hover:text-pink-400">Testimonials</a>
-          <Button variant="outline" className="w-full border-pink-500 text-pink-500 hover:bg-pink-50">Login</Button>
-          <Button className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:opacity-90">Sign Up</Button>
+          <NavLink
+            to="#features"
+            className="block text-white hover:text-pink-400"
+            onClick={handleMobileMenuClick}
+          >
+            Features
+          </NavLink>
+          <NavLink
+            to="#how-it-works"
+            className="block text-white hover:text-pink-400"
+            onClick={handleMobileMenuClick}
+          >
+            How It Works
+          </NavLink>
+          <NavLink
+            to="#testimonials"
+            className="block text-white hover:text-pink-400"
+            onClick={handleMobileMenuClick}
+          >
+            Testimonials
+          </NavLink>
+          <Button variant="outline" className="w-full border-pink-500 text-pink-500 hover:bg-pink-50">
+            Login
+          </Button>
+          <Button className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:opacity-90">
+            Sign Up
+          </Button>
         </div>
       )}
     </header>
