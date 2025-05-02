@@ -108,25 +108,25 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-[#161635] px-4 py-4 space-y-4">
           <NavLink
-            to="#features"
+            to="/"
             className="block text-white hover:text-pink-400"
             onClick={handleMobileMenuClick}
           >
-            Features
+            Home
           </NavLink>
           <NavLink
-            to="#how-it-works"
+            to="/services"
             className="block text-white hover:text-pink-400"
             onClick={handleMobileMenuClick}
           >
-            How It Works
+            Services
           </NavLink>
           <NavLink
-            to="#testimonials"
+            to="/mission"
             className="block text-white hover:text-pink-400"
             onClick={handleMobileMenuClick}
           >
-            Testimonials
+            Mission
           </NavLink>
           <Button variant="outline" className="w-full border-pink-500 text-pink-500 hover:bg-pink-50">
             Login
