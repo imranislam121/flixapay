@@ -8,13 +8,15 @@ import FeaturesSection from '@/components/sections/FeaturesSection';
 import HowItWorksSection from '@/components/sections/HowItWorksSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CallToActionSection from '@/components/sections/CallToActionSection';
+import HomePage from './Home';
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main>
+        <HomePage />
         <HeroSection />
         <TrustedBySection />
         <FeaturesSection />
@@ -22,7 +24,7 @@ const Index = () => {
         <TestimonialsSection />
         <CallToActionSection />
       </main>
-      
+
       <Footer />
     </div>
   );
