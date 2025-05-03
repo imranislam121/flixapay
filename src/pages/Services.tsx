@@ -217,9 +217,9 @@ const LongPage = () => {
                                     animate={{ opacity: 1 }}
                                     transition={{ duration: 1.9 }}
                                 >
-                                    Revenue Contribution
+
                                 </motion.h3>
-                                <p className="text-lg font-semibold text-gray-900">{service.revenuePercentage}%</p>
+
                             </div>
                         </div>
                     </motion.section>

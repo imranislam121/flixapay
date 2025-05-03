@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      content: "BorderlessPay has transformed how our e-commerce business handles international payments. The multi-currency accounts saved us thousands in conversion fees.",
+      content: "Flixapay has transformed how our e-commerce business handles international payments. The multi-currency accounts saved us thousands in conversion fees.",
       author: "Sarah Johnson",
       position: "CEO, Global Retail Inc.",
       rating: 5,
