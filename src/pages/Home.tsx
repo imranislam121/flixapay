@@ -95,7 +95,7 @@ export default function Hero() {
                             Flixapay Personal Banking is designed to empower individuals with seamless, secure, and innovative financial tools. Whether you're managing everyday expenses, saving for your future, or making international transactions, Flixapay offers personalized solutions with no hidden fees, intuitive mobile access, and round-the-clock support. Experience banking that revolves around your lifestyle, putting simplicity and convenience at your fingertips.
                         </p>
 
-            
+
                     </motion.div>
 
                     {/* Phone Mockup with Caption */}
@@ -105,15 +105,19 @@ export default function Hero() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
                     >
-                        <img
+                       <div className=" justify-between">
+                       <img
                             src="https://static.wixstatic.com/media/200884_7ec9339feb004ad8b86ad8f4a9b82d49~mv2.png/v1/fill/w_599,h_600,al_c,q_85,enc_avif,quality_auto/200884_7ec9339feb004ad8b86ad8f4a9b82d49~mv2.png"
                             alt="App Preview"
                             className="w-full  h-auto object-contain"
                         />
-                        <p className="absolute bottom-24 -right-32 text-sm md:text-base lg:text-lg underline font-futura max-w-xs">
-                            "One small swipe for you,<br />
-                            One giant leap for your finances!"
-                        </p>
+                        <div className=" ">
+                            <p className="absolute bottom-24 right-0 text-sm md:text-base lg:text-lg underline font-futura max-w-xs">
+                                "One small swipe for you,<br />
+                                One giant leap for your finances!"
+                            </p>
+                        </div>
+                       </div>
                     </motion.div>
                 </div>
             </section>
