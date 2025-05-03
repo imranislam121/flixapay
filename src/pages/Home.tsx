@@ -3,8 +3,69 @@
 import { motion } from 'framer-motion';
 
 export default function Hero() {
+    const services = [
+        {
+            title: "Cash Management",
+            points: [
+                "Named business accounts in 30+ currencies",
+                "Receive locally in 20+ countries",
+                "Cash back for UK/EU clients (EUR, GBP, USD)",
+                "Payout to 196 countries",
+                "Open banking integrations",
+                "Multi-payment support (100+ currencies)",
+                "Local payments in 37+ countries",
+                "Invoice control and reconciliation",
+                "24/7 in-depth reporting",
+                "Escrow services available"
+            ],
+        },
+        {
+            title: "Lending",
+            points: [
+                "Unsecured trade financing (no debentures)",
+                "Funding from £50k to £5m",
+                "Up to 150 days to repay",
+                "Interest from 0.8% per month",
+                "Revolving credit line",
+                "Zero impact on existing facilities",
+                "Cash flow support for company expenses"
+            ],
+        },
+        {
+            title: "Foreign Exchange",
+            points: [
+                "Access to 130+ currencies",
+                "Pay and collect in local currencies"
+            ],
+        },
+        {
+            title: "Risk Management",
+            points: [
+                "Custom hedging strategies for market volatility",
+                "Up to 7-year flexible forwards",
+                "Initial margin credit facilities"
+            ],
+        }
+    ];
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 40 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: i * 0.2,
+                duration: 0.6,
+                type: "spring",
+                stiffness: 80
+            },
+        }),
+    };
     return (
-        <div className="pt-12">
+        <div className="pt-20">
+            <section>
+                <img src="/banner.jpg" alt="Banner" className="w-full" />
+            </section>
             <section className="bg-gradient-to-br min-h-screen from-[#2f2f72] via-[#373a84] to-[#1d8b92] text-white px-4 py-20 flex items-center">
                 <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
 
@@ -78,47 +139,38 @@ export default function Hero() {
                     </motion.div>
                 </div>
             </section>
-            <section className="min-h-screen bg-gradient-to-br from-[#1d8b92] via-[#2f2f72] to-[#2f2f72] text-white px-6 py-16 flex items-center">
-                <div className="container mx-auto flex flex-col lg:flex-row items-center">
-
-                    {/* Text Content */}
-                    <motion.div
-                        className="max-w-xl text-center lg:text-left"
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+            <section className="bg-gradient-to-r from-indigo-800 to-purple-900 text-white py-16 px-6 md:px-20">
+                <div className="max-w-7xl mx-auto">
+                    <motion.h2
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-3xl md:text-4xl font-bold mb-10 text-center"
                     >
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 font-futura font-thin">
-                            Personal Banking
-                        </h1>
-                        <p className="text-base md:text-lg lg:text-xl font-thin font-futura mb-8">
-                            Flixapay Personal Banking is designed to empower individuals with seamless, secure, and innovative financial tools. Whether you're managing everyday expenses, saving for your future, or making international transactions, Flixapay offers personalized solutions with no hidden fees, intuitive mobile access, and round-the-clock support. Experience banking that revolves around your lifestyle, putting simplicity and convenience at your fingertips.
-                        </p>
+                        B2B Financial Solutions Tailored for Growth
+                    </motion.h2>
 
-
-                    </motion.div>
-
-                    {/* Phone Mockup with Caption */}
-                    <motion.div
-                        className="block justify-center lg:justify-end w-full max-w-md relative"
-                        initial={{ opacity: 0, x: 80 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
-                    >
-                       <div className=" justify-between">
-                       <img
-                            src="https://static.wixstatic.com/media/200884_7ec9339feb004ad8b86ad8f4a9b82d49~mv2.png/v1/fill/w_599,h_600,al_c,q_85,enc_avif,quality_auto/200884_7ec9339feb004ad8b86ad8f4a9b82d49~mv2.png"
-                            alt="App Preview"
-                            className="w-full  h-auto object-contain"
-                        />
-                        <div className=" ">
-                            <p className="absolute bottom-24 right-0 text-sm md:text-base lg:text-lg underline font-futura max-w-xs">
-                                "One small swipe for you,<br />
-                                One giant leap for your finances!"
-                            </p>
-                        </div>
-                       </div>
-                    </motion.div>
+                    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
+                        {services.map((service, index) => (
+                            <motion.div
+                                key={index}
+                                custom={index}
+                                initial="hidden"
+                                whileInView="visible"
+                                variants={cardVariants}
+                                viewport={{ once: true }}
+                                className="bg-white bg-opacity-10 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition duration-300"
+                            >
+                                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+                                <ul className="list-disc list-inside space-y-2 text-sm text-white">
+                                    {service.points.map((point, idx) => (
+                                        <li key={idx}>{point}</li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </section>
 

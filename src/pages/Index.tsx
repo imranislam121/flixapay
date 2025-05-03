@@ -9,10 +9,12 @@ import HowItWorksSection from '@/components/sections/HowItWorksSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CallToActionSection from '@/components/sections/CallToActionSection';
 import HomePage from './Home';
+import Notice from './Notice';
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
+    
       <Header />
 
       <main>

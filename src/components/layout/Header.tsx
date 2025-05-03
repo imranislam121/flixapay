@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Link, NavLink } from 'react-router-dom';
+import Notice from '@/pages/Notice';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,11 +29,13 @@ const Header = () => {
   };
 
   return (
+    <>
+    
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#161635] shadow-md py-3' : 'bg-[#161635] py-6'
-        }`}
+      className={`fixed w-full z-50 transition-all duration-300 bg-[#161635] `}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <Notice />
+      <div className="container mx-auto px-4 flex items-center justify-between py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <motion.div
@@ -136,7 +139,9 @@ const Header = () => {
           </Button>
         </div>
       )}
+      
     </header>
+    </>
   );
 };
 
