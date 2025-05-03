@@ -66,7 +66,7 @@ const servicesData: Service[] = [
             'Support for underserved and underbanked communities',
         ],
         revenuePercentage: 10,
-        imageUrl: '/services/micro-loans.png',
+        imageUrl: '/services/micro-loans.jpg',
     },
     {
         title: 'Mobile Money',
@@ -84,7 +84,7 @@ const servicesData: Service[] = [
             'Affordable way to make payments and transfers',
         ],
         revenuePercentage: 10,
-        imageUrl: '/services/money-transfer.png',
+        imageUrl: '/services/mobile-money.jpg',
     },
     {
         title: 'B2B POS Terminals',
@@ -120,7 +120,7 @@ const servicesData: Service[] = [
             'Secure and trustworthy remittance service',
         ],
         revenuePercentage: 20,
-        imageUrl: '/services/global-remittance.png',
+        imageUrl: '/services/remmitence.jpg',
     }
 ];
 
