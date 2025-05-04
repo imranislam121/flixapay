@@ -121,28 +121,36 @@ const Header = () => {
         <div className="md:hidden bg-[#161635] px-4 py-4 space-y-4">
           <NavLink
             to="/"
-            className="block text-white hover:text-pink-400"
+            className={({ isActive }) =>
+              `block ${isActive ? 'text-pink-500' : 'hover:text-pink-400 text-white'}`
+            }
             onClick={handleMobileMenuClick}
           >
             Home
           </NavLink>
           <NavLink
             to="/services"
-            className="block text-white hover:text-pink-400"
+            className={({ isActive }) =>
+              `block ${isActive ? 'text-pink-500' : 'hover:text-pink-400 text-white'}`
+            }
             onClick={handleMobileMenuClick}
           >
             Services
           </NavLink>
           <NavLink
             to="/mission"
-            className="block text-white hover:text-pink-400"
+            className={({ isActive }) =>
+              `block ${isActive ? 'text-pink-500' : 'hover:text-pink-400 text-white'}`
+            }
             onClick={handleMobileMenuClick}
           >
             Mission
           </NavLink>
           <NavLink
             to="/about"
-            className="block text-white hover:text-pink-400"
+            className={({ isActive }) =>
+              `block ${isActive ? 'text-pink-500' : 'hover:text-pink-400 text-white'}`
+            }
             onClick={handleMobileMenuClick}
           >
             About Us
