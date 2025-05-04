@@ -252,6 +252,9 @@ export default function Hero() {
                     <div className='bg-gradient-to-r from-indigo-700 to-purple-700 text-white p-6 rounded-lg shadow'>
                         <p className='text-base sm:text-lg md:text-xl font-semibold'>Digital Revolving Credit BNPL</p>
                     </div>
+                    <div className='bg-gradient-to-r from-indigo-700 to-purple-700 text-white p-6 rounded-lg shadow'>
+                        <p className='text-base sm:text-lg md:text-xl font-semibold'>Focus on underserved and under banked communities</p>
+                    </div>
                 </div>
             </section>
 

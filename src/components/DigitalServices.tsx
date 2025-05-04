@@ -11,7 +11,7 @@ export default function DigitalServices() {
           <h3 className="text-2xl font-semibold text-blue-700 mb-2">For Individuals</h3>
           <p className="text-gray-700 mb-4">
             FlixaPay offers low-cost, real-time cross-border payments, digital wallets with multi-currency support,
-            micro-loans, and an intuitive mobile app with rewards. Prices range between <strong>$200–$800</strong>.
+            micro-loans, and an intuitive mobile app with rewards.
           </p>
         </section>
 
@@ -30,13 +30,6 @@ export default function DigitalServices() {
         </section>
 
         <section className="mb-10">
-          <h3 className="text-2xl font-semibold text-blue-700 mb-2">Gross Margins</h3>
-          <p className="text-gray-700 mb-4">
-            We project a <strong>gross profit margin of 87%</strong> due to strategic pricing and our fully digital model, which minimizes infrastructure costs.
-          </p>
-        </section>
-
-        <section className="mb-10">
           <h3 className="text-2xl font-semibold text-blue-700 mb-2">Delivery Model</h3>
           <p className="text-gray-700 mb-4">
             Free digital delivery on orders above <strong>$5,000</strong>. Our platform supports real-time operations and cost-effective financial service delivery across markets.
@@ -50,16 +43,6 @@ export default function DigitalServices() {
             <li>1-year technical warranty with optional extensions.</li>
             <li>Refunds available for service disruptions over 24 hours.</li>
             <li>Full PCI DSS compliance and consumer protection adherence.</li>
-          </ul>
-        </section>
-
-        <section className="mb-10">
-          <h3 className="text-2xl font-semibold text-blue-700 mb-2">Future Development</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li><strong>Q3 2026:</strong> Enhanced security & redesigned mobile app UI</li>
-            <li><strong>Q4 2026:</strong> Upgraded B2B PoS terminals with analytics</li>
-            <li><strong>Q3 2026:</strong> Launch of Subscription Billing, Embedded Finance, and Earned Wage Access (EWA)</li>
-            <li><strong>Q2 2027:</strong> Contactless Cash Machines with national ATM integration</li>
           </ul>
         </section>
       </div>
