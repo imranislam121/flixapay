@@ -18,8 +18,8 @@ const Mission = () => {
   return (
     <div className="">
       <Header />
-      <section className="bg-gradient-to-br from-pink-50 via-white to-pink-100 pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl pt-32  mx-auto py-16 px-6 lg:px-20">
+      <section className="bg-gradient-to-br from-pink-50 via-white to-pink-100 pt-64 md:pt-40 lg:pt-48">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl  mx-auto py-16 px-6 lg:px-20">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -83,9 +83,9 @@ const Mission = () => {
             </motion.h2>
 
             {[
-              "Founded in October 2024 and based in the U.S., FlixaPay partners with top institutions to provide robust financial infrastructure for both individuals and enterprises.",
+              "FlixaPay partners with top institutions to provide robust financial infrastructure for both individuals and enterprises.",
               "We are structured as a corporation to ensure stability, innovation, and scalability. Our open API invites developers to extend our platform's capabilities with custom apps and integrations.",
-              "FlixaPay is preparing to launch in Q2 2025 with a mission to offer secure, convenient, and low-cost financial services across borders—positioning us as a leader in inclusive digital banking."
+              "FlixaPay is preparing to launch as soon as possible with a mission to offer secure, convenient, and low-cost financial services across borders—positioning us as a leader in inclusive digital banking."
             ].map((text, i) => (
               <motion.p
                 key={i}

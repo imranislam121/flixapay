@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <>
+   
     
     <header
       className={`fixed w-full z-50 transition-all duration-300 bg-[#161635] `}
@@ -141,7 +141,7 @@ const Header = () => {
       )}
       
     </header>
-    </>
+ 
   );
 };
 

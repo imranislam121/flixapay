@@ -128,7 +128,7 @@ const LongPage = () => {
     return (
         <div className="bg-pink-50">
             <Header />
-            <div className="container mx-auto px-4 pt-40">
+            <div className="container mx-auto px-4 pt-64 md:pt-40 lg:pt-48">
                 <motion.h1
                     className="text-4xl font-semibold text-center mb-6 text-pink-600"
                     initial={{ opacity: 0 }}

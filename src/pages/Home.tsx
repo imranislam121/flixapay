@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function Hero() {
     const services = [
         {
-            title: "Cash Management",
+            title: "Cash management with cross border payments",
             points: [
                 "Named business accounts in 30+ currencies",
                 "Receive locally in 20+ countries",
@@ -61,8 +61,16 @@ export default function Hero() {
             },
         }),
     };
+    const posItems = [
+        { name: "Android Series", image: "/pos1.jpg" },
+        { name: "Smart POS Series", image: "/pos2.jpg" },
+        { name: "ES Series", image: "/pos3.jpg" },
+        { name: "SP Series", image: "/pos4.jpg" },
+        { name: "PA Series", image: "/pos5.jpg" },
+        { name: " SD Series", image: "/pos6.jpg" },
+    ];
     return (
-        <div className="pt-20">
+        <div className="pt-40 md:pt-36 lg:pt-20">
             <section className='pt-10'>
                 <img src="/banner.jpg" alt="Banner" className="w-full" />
             </section>
@@ -173,6 +181,82 @@ export default function Hero() {
                     </div>
                 </div>
             </section>
+
+            <section className="py-12 bg-pink-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl font-bold text-pink-600 mb-10 text-center">
+                        POS Gallery
+                    </h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {posItems.map((item, index) => (
+                            <div
+                                key={index}
+                                className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+                            >
+                                <div className="h-60 overflow-hidden">
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                                    />
+                                </div>
+                                <div className="p-4 text-center">
+                                    <h3 className="text-lg font-semibold text-pink-700">
+                                        {item.name}
+                                    </h3>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className='pt-32 flex flex-col lg:flex-row items-center justify-between px-4 lg:px-16 gap-10'>
+                {/* Image Section */}
+                <div className='w-full lg:w-1/2'>
+                    <img src="/MAC-POS.png" alt="MacBook" className='w-full h-auto' />
+                </div>
+
+                {/* Text Section */}
+                <div className='w-full lg:w-1/2 text-center lg:text-left'>
+                    <h1 className='text-4xl font-bold mb-4'>Business Banking</h1>
+                    <p className='text-lg text-gray-700'>
+                        Flixapay Business Banking caters to businesses of all sizes with scalable solutions to meet your financial needs.
+                        From streamlined payments and cash flow management to tailored credit and investment options, our platform helps
+                        you stay ahead in a fast-paced economy. With advanced analytics, multi-currency capabilities, and enterprise-grade
+                        security, Flixapay ensures your business operates smoothly and securely, anywhere in the world.
+                    </p>
+                </div>
+            </section>
+
+            <section className='mx-auto max-w-4xl px-4 py-10'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                    <div className='bg-gradient-to-r from-indigo-700 to-purple-700 text-white p-6 rounded-lg shadow'>
+                        <p className='text-base sm:text-lg md:text-xl font-semibold'>Integrated Payment Systems</p>
+                    </div>
+                    <div className='bg-gradient-to-r from-indigo-700 to-purple-700 text-white p-6 rounded-lg shadow'>
+                        <p className='text-base sm:text-lg md:text-xl font-semibold'>Embedded Financial Tools</p>
+                    </div>
+                    <div className='bg-gradient-to-r from-indigo-700 to-purple-700 text-white p-6 rounded-lg shadow'>
+                        <p className='text-base sm:text-lg md:text-xl font-semibold'>Payroll & Financial Wellness</p>
+                    </div>
+                    <div className='bg-gradient-to-r from-indigo-700 to-purple-700 text-white p-6 rounded-lg shadow'>
+                        <p className='text-base sm:text-lg md:text-xl font-semibold'>SME Credit Lines</p>
+                    </div>
+                    <div className='bg-gradient-to-r from-indigo-700 to-purple-700 text-white p-6 rounded-lg shadow'>
+                        <p className='text-base sm:text-lg md:text-xl font-semibold'>PoS Solutions</p>
+                    </div>
+                    <div className='bg-gradient-to-r from-indigo-700 to-purple-700 text-white p-6 rounded-lg shadow'>
+                        <p className='text-base sm:text-lg md:text-xl font-semibold'>Insights & Analytics</p>
+                    </div>
+                    <div className='bg-gradient-to-r from-indigo-700 to-purple-700 text-white p-6 rounded-lg shadow'>
+                        <p className='text-base sm:text-lg md:text-xl font-semibold'>Digital Revolving Credit BNPL</p>
+                    </div>
+                </div>
+            </section>
+
+
+
 
         </div>
     );
