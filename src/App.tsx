@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import DownloadLinks from "./pages/DownloadLinks";
 import Mission from "./pages/Mission";
 import LongPage from "./pages/Services";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,8 @@ const App = () => (
           <Route path="/download" element={<DownloadLinks />} />
           <Route path="/services" element={<LongPage />} />
           <Route path="/mission" element={<Mission />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/about" element={<About />} />
          
           <Route path="*" element={<NotFound />} />
         </Routes>

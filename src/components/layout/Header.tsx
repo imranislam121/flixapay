@@ -77,6 +77,13 @@ const Header = () => {
           >
             Mission
           </NavLink>
+          <NavLink
+            to={"/about"}
+            className={({ isActive }) =>
+              `transition-colors ${isActive ? 'text-pink-500' : 'hover:text-pink-500 text-white '}`}
+          >
+            About Us
+          </NavLink>
           <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
             <Button variant="outline" className="border-pink-500 text-pink-500 hover:bg-pink-50">
               Login
@@ -132,6 +139,13 @@ const Header = () => {
             onClick={handleMobileMenuClick}
           >
             Mission
+          </NavLink>
+          <NavLink
+            to="/about"
+            className="block text-white hover:text-pink-400"
+            onClick={handleMobileMenuClick}
+          >
+            About Us
           </NavLink>
           <Button variant="outline" className="w-full border-pink-500 text-pink-500 hover:bg-pink-50">
             Login

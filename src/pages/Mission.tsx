@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ProblemSolution from "@/components/ProblemSolution";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -16,7 +17,7 @@ const fadeInUp = {
 
 const Mission = () => {
   return (
-    <div className="">
+    <div className="font-futura">
       <Header />
       <section className="bg-gradient-to-br from-pink-50 via-white to-pink-100 pt-64 md:pt-40 lg:pt-48">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl  mx-auto py-16 px-6 lg:px-20">
@@ -101,6 +102,7 @@ const Mission = () => {
             ))}
           </div>
         </div>
+        <ProblemSolution />
       </section>
       <Footer />
     </div>

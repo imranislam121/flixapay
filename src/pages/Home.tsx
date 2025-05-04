@@ -70,7 +70,7 @@ export default function Hero() {
         { name: " SD Series", image: "/pos6.jpg" },
     ];
     return (
-        <div className="pt-40 md:pt-36 lg:pt-20">
+        <div className="pt-40 md:pt-36 lg:pt-20 font-futura">
             <section className='pt-10'>
                 <img src="/banner.jpg" alt="Banner" className="w-full" />
             </section>
@@ -147,7 +147,7 @@ export default function Hero() {
                     </motion.div>
                 </div>
             </section>
-            <section className="bg-gradient-to-r from-indigo-800 to-purple-900 text-white py-16 px-6 md:px-20">
+            <section className="bg-gradient-to-r font-futura from-indigo-800 to-purple-900 text-white py-16 px-6 md:px-20">
                 <div className="max-w-7xl mx-auto">
                     <motion.h2
                         initial={{ opacity: 0, y: -20 }}
@@ -182,7 +182,7 @@ export default function Hero() {
                 </div>
             </section>
 
-            <section className="py-12 bg-pink-50">
+            <section className="py-12 bg-pink-50 ">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold text-pink-600 mb-10 text-center">
                         POS Gallery
@@ -211,7 +211,7 @@ export default function Hero() {
                 </div>
             </section>
 
-            <section className='pt-32 flex flex-col lg:flex-row items-center justify-between px-4 lg:px-16 gap-10'>
+            <section className='pt-32 flex flex-col lg:flex-row font-futura items-center justify-between px-4 lg:px-16 gap-10'>
                 {/* Image Section */}
                 <div className='w-full lg:w-1/2'>
                     <img src="/MAC-POS.png" alt="MacBook" className='w-full h-auto' />
@@ -229,7 +229,7 @@ export default function Hero() {
                 </div>
             </section>
 
-            <section className='mx-auto max-w-4xl px-4 py-10'>
+            <section className='mx-auto max-w-4xl px-4 py-10 font-futura'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                     <div className='bg-gradient-to-r from-indigo-700 to-purple-700 text-white p-6 rounded-lg shadow'>
                         <p className='text-base sm:text-lg md:text-xl font-semibold'>Integrated Payment Systems</p>

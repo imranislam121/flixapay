@@ -3,6 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
+import Benefit from './Benifits';
+import DigitalServices from '@/components/DigitalServices';
 
 interface Service {
     title: string;
@@ -126,7 +128,7 @@ const servicesData: Service[] = [
 
 const LongPage = () => {
     return (
-        <div className="bg-pink-50">
+        <div className="bg-pink-50 font-futura">
             <Header />
             <div className="container mx-auto px-4 pt-64 md:pt-40 lg:pt-48">
                 <motion.h1
@@ -225,17 +227,23 @@ const LongPage = () => {
                     </motion.section>
                 ))}
 
-                <footer className="text-center py-6 bg-pink-100">
-                    <motion.p
-                        className="text-lg text-gray-600"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 2 }}
-                    >
-                        Contact us to learn more about how our services can benefit you or your business. We are dedicated to making financial services accessible and efficient for everyone, everywhere.
-                    </motion.p>
-                </footer>
             </div>
+            <div className="">
+                <div className="container mx-auto px-4 py-12">
+                    <Benefit />
+                    <DigitalServices />
+                </div>
+            </div>
+            <footer className="text-center py-6 bg-pink-100">
+                <motion.p
+                    className="text-lg text-gray-600"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 2 }}
+                >
+                    Contact us to learn more about how our services can benefit you or your business. We are dedicated to making financial services accessible and efficient for everyone, everywhere.
+                </motion.p>
+            </footer>
             <Footer />
         </div>
     );
