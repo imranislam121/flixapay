@@ -1,8 +1,11 @@
 'use client';
 
+import WaitlistPopup from '@/components/Waitlist';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function Hero() {
+    const [showPopup, setShowPopup] = useState(false);
     const services = [
         {
             title: "Cash management with cross border payments",
@@ -71,6 +74,7 @@ export default function Hero() {
     ];
     return (
         <div className="pt-40 md:pt-36 lg:pt-20 font-futura">
+            <WaitlistPopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
             <section className='pt-10'>
                 <img src="/banner.jpg" alt="Banner" className="w-full" />
             </section>
@@ -128,8 +132,8 @@ export default function Hero() {
 
 
                         <div className="flex flex-initial justify-center md:justify-start gap-4 items-center text-center md:text-left">
-                            <button className='border ml-2 border-[#1d8b92] hover:bg-[#1d8b92] text-black font-futura font-bold py-2 px-6 rounded transition duration-300 ease-in-out'>
-                                Preregister
+                            <button onClick={() => setShowPopup(true)} className='border ml-2 border-[#1d8b92] hover:bg-[#1d8b92] text-black font-futura font-bold py-2 px-6 rounded transition duration-300 ease-in-out'>
+                                Waitlist
                             </button>
                         </div>
                     </motion.div>
