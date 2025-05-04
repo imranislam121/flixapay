@@ -29,8 +29,8 @@ const Header = () => {
   };
 
   return (
-   
-    
+
+
     <header
       className={`fixed w-full z-50 transition-all duration-300 bg-[#161635] `}
     >
@@ -57,21 +57,23 @@ const Header = () => {
           <NavLink
             to={"/"}
             className={({ isActive }) => 
-              `text-white transition-colors ${isActive ? 'text-pink-500' : 'hover:text-pink-500'}`}
+              `transition-colors ${isActive ? 'text-pink-500' : 'hover:text-pink-500 text-white '}`
+
+            }
           >
             Home
           </NavLink>
           <NavLink
             to={"/services"}
-            className={({ isActive }) => 
-              `text-white transition-colors ${isActive ? 'text-pink-500' : 'hover:text-pink-500'}`}
+            className={({ isActive }) =>
+              `transition-colors ${isActive ? 'text-pink-500' : 'hover:text-pink-500 text-white '}`}
           >
             Services
           </NavLink>
           <NavLink
             to={"/mission"}
-            className={({ isActive }) => 
-              `text-white transition-colors ${isActive ? 'text-pink-500' : 'hover:text-pink-500'}`}
+            className={({ isActive }) =>
+              `transition-colors ${isActive ? 'text-pink-500' : 'hover:text-pink-500 text-white '}`}
           >
             Mission
           </NavLink>
@@ -139,9 +141,9 @@ const Header = () => {
           </Button>
         </div>
       )}
-      
+
     </header>
- 
+
   );
 };
 

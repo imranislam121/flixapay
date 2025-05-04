@@ -235,8 +235,8 @@ const LongPage = () => {
                         Contact us to learn more about how our services can benefit you or your business. We are dedicated to making financial services accessible and efficient for everyone, everywhere.
                     </motion.p>
                 </footer>
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 };
