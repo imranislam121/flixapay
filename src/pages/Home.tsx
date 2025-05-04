@@ -73,7 +73,7 @@ export default function Hero() {
         { name: " SD Series", image: "/pos6.jpg" },
     ];
     return (
-        <div className="pt-40 md:pt-36 lg:pt-20 font-futura">
+        <div className="pt-44 md:pt-36 lg:pt-20 font-futura">
             <WaitlistPopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
             <section className='pt-10'>
                 <img src="/banner.jpg" alt="Banner" className="w-full" />
