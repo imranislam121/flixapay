@@ -1,0 +1,21 @@
+# Serve static files directly
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # If the request is not a file or directory
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Redirect all requests to index.html
+  RewriteRule ^ index.html [QSA,L]
+</IfModule>
+
+# Enable CORS if needed
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+# Optional: MIME types for proper file rendering
+AddType application/javascript .js
+AddType text/css .css
+AddType application/json .json
