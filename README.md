@@ -1,73 +1,113 @@
-# Welcome to your Lovable project
+# Welcome to your Flixapay Project
 
-## Project info
+This is the frontend project for the Flixapay web application.
 
-**URL**: https://lovable.dev/projects/4adfd62b-078f-4a78-ae8e-2c6f18595afc
+---
 
-## How can I edit this code?
+## Project Info
 
-There are several ways of editing your application.
+This project is built using the following technologies:
 
-**Use Lovable**
+* Vite
+* React
+* TypeScript
+* Tailwind CSS
+* shadcn-ui
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4adfd62b-078f-4a78-ae8e-2c6f18595afc) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## How to Edit This Code
 
-**Use your preferred IDE**
+You can edit the code using any of the following methods:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 1. Using Git Locally with Your Preferred IDE
 
-Follow these steps:
+Follow these steps to set up the project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository using the project’s Git URL.
 git clone <YOUR_GIT_URL>
 
 # Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install the required dependencies.
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 2. Edit Files Directly in GitHub
 
-**Use GitHub Codespaces**
+1. Open your repository on GitHub.
+2. Navigate to the file you want to edit.
+3. Click the "Edit" button (pencil icon) on the top right.
+4. Make your changes.
+5. Scroll down, write a commit message, and click "Commit changes".
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+### 3. Use GitHub Codespaces
 
-This project is built with:
+1. Go to your GitHub repository.
+2. Click on the green **Code** button.
+3. Open the **Codespaces** tab.
+4. Click **New codespace** to launch a development environment.
+5. Make changes directly in the Codespace and commit them.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## Domain Setup Steps
 
-Simply open [Lovable](https://lovable.dev/projects/4adfd62b-078f-4a78-ae8e-2c6f18595afc) and click on Share -> Publish.
+If you are setting up a custom domain, follow these steps:
 
-## Can I connect a custom domain to my Lovable project?
+1. Purchase or access your domain from a domain provider (e.g., GoDaddy, Namecheap).
+2. Log in to your domain provider’s DNS management dashboard.
+3. Add the following DNS records based on your hosting provider:
 
-Yes, you can!
+   * **CNAME Record**: Point your subdomain (e.g., `flixapaygroup.com`) to your hosting URL (e.g., `flixapay.vercel.app`).
+   * **A Record**: If self-hosting, point to the IP address of your server.
+4. Save the DNS records.
+5. Ensure your hosting platform is configured to accept the custom domain.
+6. Set up SSL (usually automatic with most hosting services).
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Scripts
+
+```json
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+}
+```
+
+---
+
+## Directory Structure (Example)
+
+```
+flixapay-frontend/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── App.tsx
+│   ├── main.tsx
+├── tailwind.config.ts
+├── vite.config.ts
+├── tsconfig.json
+├── package.json
+└── README.md
+```
+
+---
+
+Replace `<YOUR_GIT_URL>` and `<YOUR_PROJECT_NAME>` with the actual repository link and folder name.
