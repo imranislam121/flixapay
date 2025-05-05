@@ -9,17 +9,19 @@ interface WaitlistPopupProps {
 const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState("");
   const [isAlreadyWaitlisted, setIsAlreadyWaitlisted] = useState(false);
-
+  const checkEmailInLocalStorage = () => {
+    const storedEmail = localStorage.getItem("waitlistEmail");
+    if (storedEmail) {
+      setIsAlreadyWaitlisted(true);
+      setEmail(storedEmail);
+    } else {
+      setIsAlreadyWaitlisted(false);
+      setEmail("");
+    }
+  }
   useEffect(() => {
     if (isOpen) {
-      const storedEmail = localStorage.getItem("waitlistEmail");
-      if (storedEmail) {
-        setIsAlreadyWaitlisted(true);
-        setEmail(storedEmail);
-      } else {
-        setIsAlreadyWaitlisted(false);
-        setEmail("");
-      }
+      checkEmailInLocalStorage();
     }
   }, [isOpen]);
 
@@ -74,6 +76,19 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ isOpen, onClose }) => {
                 </button>
               </form>
             )}
+            {
+              isAlreadyWaitlisted && (
+                <button
+                  onClick={() => {
+                    localStorage.removeItem("waitlistEmail");
+                    checkEmailInLocalStorage();
+                  }}
+                  className="w-full bg-white text-purple-700 font-semibold py-2 rounded-md hover:bg-gray-100 transition"
+                >
+                  ReSubmit
+                </button>
+              )
+            }
 
             <button
               onClick={onClose}
