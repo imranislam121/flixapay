@@ -30,9 +30,11 @@ const HeroSection = () => {
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
+              <Link to={"/about"}>
               <Button variant="outline" className="border-fintech-darkGray text-fintech-darkGray hover:bg-fintech-lightGray py-6 px-8 text-lg">
                 Learn More
               </Button>
+              </Link>
             </motion.div>
           </div>
         

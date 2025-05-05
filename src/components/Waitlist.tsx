@@ -1,5 +1,4 @@
-// WaitlistPopup.tsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface WaitlistPopupProps {
@@ -9,9 +8,24 @@ interface WaitlistPopupProps {
 
 const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState("");
+  const [isAlreadyWaitlisted, setIsAlreadyWaitlisted] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      const storedEmail = localStorage.getItem("waitlistEmail");
+      if (storedEmail) {
+        setIsAlreadyWaitlisted(true);
+        setEmail(storedEmail);
+      } else {
+        setIsAlreadyWaitlisted(false);
+        setEmail("");
+      }
+    }
+  }, [isOpen]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    localStorage.setItem("waitlistEmail", email);
     console.log("Email submitted:", email);
     setEmail("");
     onClose(); // close after submission
@@ -33,26 +47,34 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ isOpen, onClose }) => {
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-2xl font-bold mb-4 text-center">Join Our Waitlist</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center">
+              {isAlreadyWaitlisted ? "You're Waitlisted!" : "Join Our Waitlist"}
+            </h2>
             <p className="text-sm text-center mb-6">
-              Be the first to know when we launch. Enter your email below.
+              {isAlreadyWaitlisted
+                ? "Thank you for joining. We'll notify you at your email."
+                : "Be the first to know when we launch. Enter your email below."}
             </p>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                type="email"
-                required
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              <button
-                type="submit"
-                className="w-full bg-white text-purple-700 font-semibold py-2 rounded-md hover:bg-gray-100 transition"
-              >
-                Join Waitlist
-              </button>
-            </form>
+
+            {!isAlreadyWaitlisted && (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-white"
+                />
+                <button
+                  type="submit"
+                  className="w-full bg-white text-purple-700 font-semibold py-2 rounded-md hover:bg-gray-100 transition"
+                >
+                  Join Waitlist
+                </button>
+              </form>
+            )}
+
             <button
               onClick={onClose}
               className="mt-6 text-sm underline text-center w-full hover:text-gray-200"

@@ -92,7 +92,7 @@ const HowItWorksSection = () => {
           viewport={{ once: true }}
         >
           <a 
-            href="#" 
+            href="/services" 
             className="inline-flex items-center text-gradient bg-clip-text text-transparent bg-gradient-to-r from-fintech-brightPurple to-fintech-orange hover:opacity-80 transition-opacity font-medium"
           >
             View detailed process

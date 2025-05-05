@@ -1,5 +1,6 @@
 'use client';
 
+import ComingSoon from '@/components/ComingSoon';
 import WaitlistPopup from '@/components/Waitlist';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -75,6 +76,8 @@ export default function Hero() {
     return (
         <div className="pt-44 md:pt-36 lg:pt-20 font-futura">
             <WaitlistPopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
+
+
             <section className='pt-10'>
                 <img src="/banner.jpg" alt="Banner" className="w-full" />
             </section>
@@ -96,9 +99,13 @@ export default function Hero() {
                             and innovative financial tools – all in one platform.
                         </p>
 
-                        <div className="flex flex-initial justify-center md:justify-start gap-4 items-center text-center md:text-left">
-                            <img src="/play-store.png" alt="Google Play" className="w-36 h-14 hover:scale-105 cursor-pointer" />
-                            <img src="/apple-store.png" alt="App Store" className="w-36 h-12 hover:scale-105 cursor-pointer" />
+                        <div className="flex justify-center md:justify-start gap-4 items-center">
+                            <a href="https://play.google.com/store/apps/details?id=com.flixa.flixa" target="_blank" rel="noopener noreferrer">
+                                <img src="/play-store.png" alt="Google Play" className="w-36 h-14 hover:scale-105 cursor-pointer" />
+                            </a>
+                            <a href="https://apps.apple.com/app/id1641853344" target="_blank" rel="noopener noreferrer">
+                                <img src="/apple-store.png" alt="App Store" className="w-36 h-12 hover:scale-105 cursor-pointer" />
+                            </a>
                         </div>
                     </motion.div>
 

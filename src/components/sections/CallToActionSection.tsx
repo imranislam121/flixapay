@@ -1,11 +1,14 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import FeatureUnavailablePopup from '../ComingSoon';
 
 const CallToActionSection = () => {
+  const [comingSoonPopupOpen, setComingSoonPopupOpen] = useState(false);
   return (
     <section className="py-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white">
+      <FeatureUnavailablePopup isOpen={comingSoonPopupOpen} onClose={() => setComingSoonPopupOpen(false)} />
       <div className="container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,12 +28,12 @@ const CallToActionSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
-              <Button className="bg-white text-pink-500 hover:bg-pink-50 hover:text-purple-600 px-8 py-6 text-lg">
+              <Button onClick={() => setComingSoonPopupOpen(true)} className="bg-white text-pink-500 hover:bg-pink-50 hover:text-purple-600 px-8 py-6 text-lg">
                 Send Money Now
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
-              <Button variant="outline" className="bg-white text-black hover:bg-pink-50 hover:text-purple-600 px-8 py-6 text-lg">
+              <Button onClick={() => setComingSoonPopupOpen(true)} variant="outline" className="bg-white text-purple-600 hover:bg-pink-50 hover:text-pink-600 px-8 py-6 text-lg">
                 Schedule a Demo
               </Button>
             </motion.div>

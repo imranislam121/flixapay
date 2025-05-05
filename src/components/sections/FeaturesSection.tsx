@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import FeatureUnavailablePopup from '../ComingSoon';
 
 const FeaturesSection = () => {
   const features = [
@@ -62,9 +63,10 @@ const FeaturesSection = () => {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 }
   };
-
+const [comingSoon, setComingSoon] = useState(false);
   return (
     <section id="features" className="py-20">
+      <FeatureUnavailablePopup isOpen={comingSoon} onClose={() => setComingSoon(false)} />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-block bg-fintech-brightPurple/10 rounded-full px-4 py-1 mb-4">
@@ -97,7 +99,7 @@ const FeaturesSection = () => {
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
-                  <a href="#" className={`inline-flex items-center text-gradient bg-clip-text text-transparent bg-gradient-to-r ${feature.gradient} font-medium hover:opacity-80 transition-opacity`}>
+                  <a href="/about" className={`inline-flex items-center text-gradient bg-clip-text text-transparent bg-gradient-to-r ${feature.gradient} font-medium hover:opacity-80 transition-opacity`}>
                     Learn more <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </CardFooter>
@@ -123,7 +125,7 @@ const FeaturesSection = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to go global with your business?</h3>
             <p className="mb-8 max-w-2xl mx-auto">Join thousands of businesses using our platform to expand internationally.</p>
             <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
-              <button className="bg-white text-fintech-brightPurple font-semibold py-3 px-8 rounded-lg hover:bg-fintech-lightGray transition-colors">
+              <button onClick={() => setComingSoon(true)} className="bg-white text-fintech-brightPurple font-semibold py-3 px-8 rounded-lg hover:bg-fintech-lightGray transition-colors">
                 Get Started
               </button>
             </motion.div>
