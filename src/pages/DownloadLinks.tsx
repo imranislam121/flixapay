@@ -1,10 +1,14 @@
 'use client';
 
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
 import React from 'react';
 import { FaWindows, FaApple, FaLinux } from 'react-icons/fa';
 
 const DownloadSection = () => {
   return (
+    <div className='font-futura'>
+      <Header />
     <section className="bg-white min-h-screen font-futura flex flex-col items-center justify-center py-20 px-4 text-white">
       {/* Heading */}
       <div className="text-center mb-10">
@@ -80,6 +84,8 @@ const DownloadSection = () => {
         </a>
       </div>
     </section>
+    <Footer/>
+    </div>
   );
 };
 
