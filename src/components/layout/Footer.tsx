@@ -10,8 +10,8 @@ const Footer = () => {
               <img src="/flixapay-full.png" alt="" />
             </div>
             <p className="text-white/70 mb-6 max-w-xs">
-            To revolutionize financial access by bridging the gap between underserved and
-            developed markets with cutting-edge digital banking solutions.
+              To revolutionize financial access by bridging the gap between underserved and
+              developed markets with cutting-edge digital banking solutions.
             </p>
             <div className="flex space-x-4">
               <a href="" className="text-white/70 hover:text-blue-600 transition-colors">
@@ -39,6 +39,10 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
+            <div className="pt-3 px-2">
+              <a className="text-white/70" href="mailto:hello@flixapaygroup.com"> hello@flixapaygroup.com
+              </a>
+            </div>
           </div>
 
           <div>
@@ -57,7 +61,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="" className="text-white/70 hover:text-fintech-teal transition-colors">Blog</a></li>
               <li><a href="" className="text-white/70 hover:text-fintech-teal transition-colors">Guides</a></li>
-              <li><a href="" className="text-white/70 hover:text-fintech-teal transition-colors">Help Center</a></li>
+              <li><a href="mailto:hello@flixapaygroup.com" className="text-white/70 hover:text-fintech-teal transition-colors">Help Center</a></li>
               <li><a href="" className="text-white/70 hover:text-fintech-teal transition-colors">API Documentation</a></li>
               <li><a href="" className="text-white/70 hover:text-fintech-teal transition-colors">Community</a></li>
             </ul>
@@ -67,9 +71,9 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
               <li><a href="/about" className="text-white/70 hover:text-fintech-teal transition-colors">About Us</a></li>
-              <li><a href="" className="text-white/70 hover:text-fintech-teal transition-colors">Careers</a></li>
+            
               <li><a href="" className="text-white/70 hover:text-fintech-teal transition-colors">Press</a></li>
-              <li><a href="" className="text-white/70 hover:text-fintech-teal transition-colors">Contact</a></li>
+              <li><a href="mailto:hello@flixapaygroup.com" className="text-white/70 hover:text-fintech-teal transition-colors">Contact</a></li>
               <li><a href="" className="text-white/70 hover:text-fintech-teal transition-colors">Partnerships</a></li>
             </ul>
           </div>
@@ -77,7 +81,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-6 border-t border-white/20 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/70 mb-4 md:mb-0">
-            &copy; {currentYear} Flixapay. All rights reserved.
+            &copy; {currentYear} Flixapaygroup. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="/privacy" className="text-white/70 hover:text-fintech-teal transition-colors text-sm">Terms</a>
